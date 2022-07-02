@@ -342,6 +342,7 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
 #endif
 #if defined(VIALRGB_ENABLE)
             vialrgb_set_value(data, length);
+#endif
 #if defined(VIA_QMK_RGB_MATRIX_ENABLE)
             via_qmk_rgb_matrix_set_value(command_data);
 #endif

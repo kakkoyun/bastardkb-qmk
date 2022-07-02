@@ -115,7 +115,7 @@ void action_exec(keyevent_t event) {
             clear_oneshot_swaphands();
         }
 #        endif
-}
+#    endif
     }
 #endif
 

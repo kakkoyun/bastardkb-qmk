@@ -188,3 +188,7 @@ enum {
 #if defined(VIAL_ENCODERS_ENABLE) && !defined(ENCODER_MAP_ENABLE)
 #error VIAL_ENCODERS_ENABLE=yes requires ENCODER_MAP_ENABLE=yes
 #endif
+
+// #if defined(VIAL_TAP_DANCE_ENABLE) && !defined(DYNAMIC_TAPPING_TERM_ENABLE)
+// #error VIAL_TAP_DANCE_ENABLE=yes requires DYNAMIC_TAPPING_TERM_ENABLE=yes
+// #endif
