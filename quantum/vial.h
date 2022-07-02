@@ -184,3 +184,7 @@ enum {
 #undef VIAL_KEY_OVERRIDE_ENTRIES
 #define VIAL_KEY_OVERRIDE_ENTRIES 0
 #endif
+
+#if defined(VIAL_ENCODERS_ENABLE) && !defined(ENCODER_MAP_ENABLE)
+#error VIAL_ENCODERS_ENABLE=yes requires ENCODER_MAP_ENABLE=yes
+#endif
