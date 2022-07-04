@@ -39,6 +39,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
+#ifdef ENCODER_MAP_ENABLE
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [_HOME]  = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_RED]   = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_BLUE]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_GREEN] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+};
+#endif
 
 /* Select led layout */
 layer_state_t layer_state_set_user(layer_state_t state)

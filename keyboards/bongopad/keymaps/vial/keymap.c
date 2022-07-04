@@ -40,16 +40,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // clang-format on
 
-#ifdef ENCODER_ENABLE
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (clockwise) {
-      tap_code(KC__VOLUP);
-    } else {
-      tap_code(KC__VOLDOWN);
-    }
-    return true;
-}
-#endif // ENCODER_ENABLE
+#ifdef ENCODER_MAP_ENABLE
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [Layer1] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [Layer2] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [Layer3] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [Layer4] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+};
+#endif
 
 #ifdef OLED_ENABLE
 

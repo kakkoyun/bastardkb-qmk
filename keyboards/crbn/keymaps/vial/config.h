@@ -7,6 +7,5 @@
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 2 }
 #define VIAL_UNLOCK_COMBO_COLS { 0, 11 }
 
-/* Encoder default values and delay */
-#define VIAL_ENCODER_DEFAULT { KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS }
+/* Encoder delay */
 #define VIAL_ENCODER_KEYCODE_DELAY 10
