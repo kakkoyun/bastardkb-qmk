@@ -55,7 +55,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 };
 #endif
 
-#ifdef OLED_DRIVER_ENABLE
+#ifdef OLED_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
 }
@@ -70,7 +70,8 @@ static void render_name(void) {
     oled_write_P(mercutio_name, false);
 }
 
-void oled_task_user(void) {
+bool oled_task_user(void) {
     render_name();
+    return false;
 }
 #endif
