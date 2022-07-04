@@ -1,4 +1,12 @@
-# This is the `develop` branch!
+# This is the `vial-develop` branch!
+
+**NOTE: This is a merge of qmk_firmware's develop branch and vial's main branch. My intention with this fork is to provide VIAL support for the RP2040 (and other boards using MCUs like the L432, e.g. Q1) using the official QMK implementation.**
+
+Notable changes:
+* See `keyboards/vial_example/vial_rp2040` for how to add rp2040 specific rules to your `rules.mk`.
+* For boards using `VIAL_ENCODERS_ENABLE`, this fork changed how you assign the default keycodes. It now follows QMK's [Encoder Map](https://github.com/qmk/qmk_firmware/blob/master/docs/feature_encoders.md#encoder-map-idencoder-map) guidelines, instead of the definition of a `VIAL_ENCODERS_DEFAULT` variable in the `config.h`.
+* This fork also allows for proper STM32L432/L433 EEPROM emulation support. This means the Keychron Q-series boards get proper vial support. See `keyboards/keychron`.
+* TECHNICAL CHANGE: This fork doesn't carry over [#16394](https://github.com/qmk/qmk_firmware/pull/16394), as it broke VIAL's implementation of Dynamic Tap Dance. I was not smart enough to update VIAL's implementation of tap dance to suit QMK's changes so I just reverted it to use what existed before. This has little/no effect on users.
 
 See the [Breaking Changes](https://docs.qmk.fm/#/breaking_changes) document for more information.
 
