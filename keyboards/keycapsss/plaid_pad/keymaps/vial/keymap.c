@@ -86,11 +86,28 @@ Rev1.1                      Rev1
 `-----------------------'   `-----------------------'
  */
 
+#if (DEVICE_VER == 0x0001)
+
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    /*      E1                                E2                             */
+    [0] = { ENCODER_CCW_CW(KC_F18, KC_F17),   ENCODER_CCW_CW(KC_F20, KC_F19) },
+    [1] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [2] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [3] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+
+};
+
+#else
+
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     /*      E1                                E2                                E3                                E4                             */
     [0] = { ENCODER_CCW_CW(KC_F18, KC_F17),   ENCODER_CCW_CW(KC_F20, KC_F19),   ENCODER_CCW_CW(KC_F22, KC_F21),   ENCODER_CCW_CW(KC_F24, KC_F23) },
     [1] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
     [2] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
     [3] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+
 };
+
+#endif
+
 #endif

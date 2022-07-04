@@ -27,4 +27,7 @@
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 5, 3, 8 }
 #define VIAL_UNLOCK_COMBO_COLS { 0, 0, 0, 0 }
 
+#ifdef ENCODER_RESOLUTIONS
+#undef ENCODER_RESOLUTIONS
 #define ENCODER_RESOLUTIONS { 4, 2 }
+#endif

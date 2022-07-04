@@ -26,3 +26,5 @@
 
 #define LED_RED C5      // LED1
 #define LED_GREEN C4    // LED2
+
+#define ONLY_TWO_ENCODERS
