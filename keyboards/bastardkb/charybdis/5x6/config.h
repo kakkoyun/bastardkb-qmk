@@ -21,7 +21,7 @@
 #include "config_common.h"
 
 /* Key matrix configuration. */
-#define MATRIX_ROWS 10 // Rows are doubled-up.
+#define MATRIX_ROWS 12 // 10 // Rows are doubled-up.
 #define MATRIX_COLS 6
 
 #define DIODE_DIRECTION ROW2COL
@@ -33,9 +33,9 @@
 #define ROTATIONAL_TRANSFORM_ANGLE -25
 
 /* RGB settings. */
-#define RGBLED_NUM 58
+#define RGBLED_NUM 61
 #define RGBLED_SPLIT \
-    { 29, 29 }
+    { 32, 29 }
 
 /* RGB matrix support. */
 #ifdef RGB_MATRIX_ENABLE

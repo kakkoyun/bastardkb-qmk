@@ -1,5 +1,5 @@
 {
-    "url": "https://bastardkb.com/charybdis",
+    "url": "https://kakkoyun.me/keyboards",
     "usb": {
         "pid": "0x1833",
     },
@@ -54,14 +54,19 @@
                 { "label": "R33", "x": 14, "y": 3 },
                 { "label": "R34", "x": 15, "y": 3 },
                 { "label": "R35", "x": 16, "y": 3 },
-                { "label": "L40", "x": 5, "y": 4 },
-                { "label": "L41", "x": 6, "y": 4 },
-                { "label": "L42", "x": 7, "y": 4 },
-                { "label": "R40", "x": 9, "y": 4 },
-                { "label": "R41", "x": 10, "y": 4 },
+                { "label": "L40", "x": 2, "y": 4 },
+                { "label": "L41", "x": 3, "y": 4 },
+                { "label": "L42", "x": 4, "y": 4 },
+                { "label": "L43", "x": 5, "y": 4 },
+                { "label": "R40", "x": 13, "y": 4 },
+                { "label": "R41", "x": 14, "y": 4 },
                 { "label": "L50", "x": 6, "y": 5 },
                 { "label": "L51", "x": 7, "y": 5 },
-                { "label": "R50", "x": 9, "y": 5 }
+                { "label": "R50", "x": 9, "y": 5 },
+                { "label": "L60", "x": 6, "y": 6 },
+                { "label": "L61", "x": 7, "y": 6 },
+                { "label": "R60", "x": 8, "y": 6 },
+                { "label": "R61", "x": 9, "y": 6 }
             ]
         }
     }

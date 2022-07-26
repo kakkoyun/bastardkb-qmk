@@ -24,13 +24,13 @@
     { F6, F5, B6, D7, E6, B4 }
 
 /* Handedness. */
-#define MASTER_RIGHT
+#define MASTER_LEFT // MASTER_RIGHT
 
 /* serial.c configuration (for split keyboard). */
-#define SOFT_SERIAL_PIN D2
+#define SOFT_SERIAL_PIN D0 // D2
 
 /* RGB settings. */
 #define RGB_DI_PIN D3
 
 /* PMW3360 settings. */
-#define PMW3360_CS_PIN F0
+#define PMW3360_CS_PIN F7 // B0
