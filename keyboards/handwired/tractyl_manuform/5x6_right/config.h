@@ -49,3 +49,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_ONESHOT
 
 #define POINTING_DEVICE_RIGHT
+
+#define CHARYBDIS_MINIMUM_DEFAULT_DPI 1200
+#define CHARYBDIS_DEFAULT_DPI_CONFIG_STEP 200
+#define CHARYBDIS_MINIMUM_SNIPING_DPI 400
+#define CHARYBDIS_SNIPING_DPI_CONFIG_STEP 200
