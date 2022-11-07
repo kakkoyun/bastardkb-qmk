@@ -22,9 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // wiring of each half
 #define MATRIX_COL_PINS \
-    { D4, D7, E6, B4, B5, B7 }
+    { D4, C6, D7, E6, B4, B5 }
 #define MATRIX_ROW_PINS \
-    { F7, F6, F5, F4, F1, F0 }
+    { F0, F1, C7, D5, B7, B6 }
 
 #define DIODE_DIRECTION COL2ROW
 
@@ -36,16 +36,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     { 10, 10 }
 #define RGBLIGHT_LIMIT_VAL 80
 
-#define AUDIO_PIN       C6
+#define AUDIO_PIN       C6 // TODO(kakkoyun): Needs to change!
 
 /* serial.c configuration for split keyboard */
-#define SOFT_SERIAL_PIN D2
+#define SOFT_SERIAL_PIN D0 // D2
 #define EE_HANDS
 
 #define ENCODERS_PAD_A \
-    { D5 }
+    { D5 } // TODO(kakkoyun): Needs to change!
 #define ENCODERS_PAD_B \
-    { C7 }
+    { C7 } // TODO(kakkoyun): Needs to change!
 
 /* PMW3360 Settings */
-#define PMW3360_CS_PIN B6
+#define PMW3360_CS_PIN F7 // B6

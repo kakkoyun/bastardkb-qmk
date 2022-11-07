@@ -20,9 +20,9 @@
 
 /* Key matrix configuration. */
 #define MATRIX_ROW_PINS \
-    { B7, C6, D4, B5 }
+    { F0, C6, D4, B5 }
 #define MATRIX_COL_PINS \
-    { C7, F0, D7, E6, B4 }
+    { C7, B7, D7, E6, B4 }
 
 #define MATRIX_ROW_PINS_RIGHT \
     { F0, C6, D4, B5 }
