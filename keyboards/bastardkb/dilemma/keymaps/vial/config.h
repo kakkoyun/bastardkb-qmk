@@ -95,8 +95,13 @@
 /* Charybdis-specific features. */
 
 #ifdef POINTING_DEVICE_ENABLE
-// Automatically enable the pointer layer when moving the trackball.  See also:
-// - `DILEMMA_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS`
-// - `DILEMMA_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD`
-// #define DILEMMA_AUTO_POINTER_LAYER_TRIGGER_ENABLE
+// Automatically enable the pointer layer when moving the trackball.
+#define DILEMMA_AUTO_POINTER_LAYER_TRIGGER_ENABLE
+#define DILEMMA_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS 1000
+#define DILEMMA_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD 8
+
+// Enable tap-to-click.
+#define CIRQUE_PINNACLE_TAP_ENABLE
+#define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE
+#define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
 #endif // POINTING_DEVICE_ENABLE
