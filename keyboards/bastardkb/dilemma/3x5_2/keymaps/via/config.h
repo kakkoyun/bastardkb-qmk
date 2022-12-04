@@ -22,6 +22,46 @@
 #endif // VIA_ENABLE
 
 /**
+ * Configure the global tapping term (default: 200ms).
+ * If you have a lot of accidental mod activations, crank up the tapping term.
+ *
+ * See docs.qmk.fm/using-qmk/software-features/tap_hold#tapping-term
+ */
+#ifndef TAPPING_TERM
+#    define TAPPING_TERM 160
+#endif // TAPPING_TERM
+
+/**
+ * Enable rapid switch from tap to hold.  Disable auto-repeat when pressing key
+ * twice, except for one-shot keys.
+ *
+ * See docs.qmk.fm/using-qmk/software-features/tap_hold#tapping-force-hold
+ */
+#define TAPPING_FORCE_HOLD
+
+/*
+ * Tap-or-Hold decision modes.
+ *
+ * Note that the following flags behave differently when combined (ie. when 2 or
+ * more are enabled).
+ *
+ * See bit.ly/tap-or-hold for a visual explanation of the following tap-or-hold
+ * decision modes.
+ */
+
+/**
+ * Faster tap-hold trigger.
+ *
+ * Without `PERMISSIVE_HOLD`, within `TAPPING_TERM`:
+ *   Mod(a)🠗 e🠗 e🠕 Mod(a)🠕 ➞ ae
+ * With `PERMISSIVE_HOLD`, within `TAPPING_TERM`:
+ *   Mod(a)🠗 e🠗 e🠕 Mod(a)🠕 ➞ Mod+e
+ *
+ * See docs.qmk.fm/using-qmk/software-features/tap_hold#permissive-hold
+ */
+#define PERMISSIVE_HOLD
+
+/**
  * \brief Prevent normal rollover on alphas from accidentally triggering mods.
  *
  * Ignores key presses that interrupt a mod-tap.  Must-have for Home Row mod.
@@ -36,8 +76,23 @@
 /* Charybdis-specific features. */
 
 #ifdef POINTING_DEVICE_ENABLE
-// Automatically enable the pointer layer when moving the trackball.  See also:
-// - `DILEMMA_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS`
-// - `DILEMMA_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD`
-// #define DILEMMA_AUTO_POINTER_LAYER_TRIGGER_ENABLE
+
+// Enable tap-to-click.
+#define CIRQUE_PINNACLE_TAP_ENABLE
+// #define CIRQUE_PINNACLE_TAPPING_TERM 200
+
+#define CIRQUE_PINNACLE_SECONDARY_TAP_ENABLE
+// #define CIRQUE_PINNACLE_TOUCH_DEBOUNCE 200
+
+// Automatically enable the pointer layer when moving the trackball.
+#define DILEMMA_AUTO_POINTER_LAYER_TRIGGER_ENABLE
+#define DILEMMA_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS 1000
+#define DILEMMA_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD 8
+
+#define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE
+#define POINTING_DEVICE_GESTURES_SCROLL_ENABLE // Circular scroll.
+
+// #define DRAGSCROLL_MODE
+// #define DRAGSCROLL_TOGGLE
+
 #endif // POINTING_DEVICE_ENABLE
