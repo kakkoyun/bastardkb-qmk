@@ -343,3 +343,15 @@ void keyboard_pre_init_kb(void) {
 
     keyboard_pre_init_user();
 }
+
+
+// uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case LALT_T(KC_S):
+//             return 130; // Not recommended
+//         case SFT_T(KC_F):
+//             return TAPPING_TERM + 50; // Recommended
+//         default:
+//             return TAPPING_TERM;
+//     }
+// }
