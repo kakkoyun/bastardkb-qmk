@@ -89,16 +89,16 @@ static uint16_t auto_pointer_layer_timer = 0;
  * from the base layer to enable auto-repeat.
  */
 #define LAYOUT_LAYER_FUNCTION                                                                 \
-    _______________DEAD_HALF_ROW_______________, KC_PSCR,   KC_F7,   KC_F8,   KC_F9,  KC_F12, \
+     KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR,   KC_F7,   KC_F8,   KC_F9,  KC_F12, \
     ______________HOME_ROW_GACS_L______________, KC_SCRL,   KC_F4,   KC_F5,   KC_F6,  KC_F11, \
     _______________DEAD_HALF_ROW_______________, KC_PAUS,   KC_F1,   KC_F2,   KC_F3,  KC_F10, \
                                _______, XXXXXXX, XXXXXXX, XXXXXXX
 
 /** \brief Mouse emulation and pointer functions. */
 #define LAYOUT_LAYER_POINTER                                                                  \
-    QK_BOOT,  EE_CLR, XXXXXXX, DPI_MOD, S_D_MOD, S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT, \
+    QK_BOOT,  EE_CLR,   DT_UP, DPI_MOD, S_D_MOD,  S_D_MOD, DPI_MOD, DT_DOWN, EE_CLR, QK_BOOT, \
     ______________HOME_ROW_GACS_L______________, ______________HOME_ROW_GACS_R______________, \
-    _______, DRGSCRL, SNIPING, KC_BTN3, XXXXXXX, XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______, \
+    _______, DRGSCRL, SNIPING, KC_BTN3, DT_PRNT, DT_PRNT, KC_BTN3, SNIPING, DRGSCRL, _______, \
                                KC_BTN2, KC_BTN1, KC_BTN1, KC_BTN2
 
 /**
@@ -110,7 +110,7 @@ static uint16_t auto_pointer_layer_timer = 0;
  * base layer to avoid having to layer change mid edit and to enable auto-repeat.
  */
 #define LAYOUT_LAYER_NAVIGATION                                                               \
-    _______________DEAD_HALF_ROW_______________, _______________DEAD_HALF_ROW_______________, \
+     KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______________DEAD_HALF_ROW_______________, \
     ______________HOME_ROW_GACS_L______________, KC_CAPS, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, \
     _______________DEAD_HALF_ROW_______________,  KC_INS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, \
                                XXXXXXX, _______,  KC_ENT, KC_BSPC
